@@ -27,7 +27,6 @@ public class FristWindow extends JFrame {
 	private JPanel contentPane;
 	private JTextField textField;
 	private JLabel lblNewLabel;
-	private JButton button;
 	private JButton btnNewButton;
 
 	/**
@@ -58,7 +57,6 @@ public class FristWindow extends JFrame {
 		setContentPane(contentPane);
 		contentPane.add(getTextField(), BorderLayout.NORTH);
 		contentPane.add(getLblNewLabel(), BorderLayout.EAST);
-		contentPane.add(getButton(), BorderLayout.WEST);
 		contentPane.add(getBtnNewButton(), BorderLayout.SOUTH);
 	}
 
@@ -82,18 +80,12 @@ public class FristWindow extends JFrame {
 		}
 		return lblNewLabel;
 	}
-	private JButton getButton() {
-		if (button == null) {
-			button = new JButton("New button");
-		}
-		return button;
-	}
 	private JButton getBtnNewButton() {
 		if (btnNewButton == null) {
 			btnNewButton = new JButton("OK");
 			btnNewButton.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
-					JOptionPane.showMessageDialog(null, "Bienvenue" + textField.getText());
+					JOptionPane.showMessageDialog(null, "Bienvenue" + textField.getText);
 				}
 			});
 		}
